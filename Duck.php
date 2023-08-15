@@ -3,13 +3,7 @@ $timezone = date_default_timezone_get();           // 获取默认时区
 if ($timezone !== 'Asia/Shanghai') {
     date_default_timezone_set('Asia/Shanghai');    // 设置默认时区
 }
-/*
- * @Author: 贺和平
- * @Date: 2022-08-22 21:27:52
- * @Mail: 1297685880@qq.com
- * @LastEditTime: 2022-08-23 01:06:40
- * @FilePath: \\wechat-msg\\tools\\Duck.php
- */
+
 class Duck
 {
     var $hefengkey;
@@ -226,32 +220,32 @@ class Duck
         return $days;
     }
 
-    /**
-     * 新冠疫情
-     */
-    public function getFeiYan()
-    {
-        $data = $this->getUrl('https://cdn.mdeer.com/data/yqstaticdata.js');
-        $data = ltrim($data,'callbackstaticdata(');
-        $data = rtrim($data,')');
-        $data = json_decode($data,true);
+    // /**
+    //  * 新冠疫情
+    //  */
+    // public function getFeiYan()
+    // {
+    //     $data = $this->getUrl('https://cdn.mdeer.com/data/yqstaticdata.js');
+    //     $data = ltrim($data,'callbackstaticdata(');
+    //     $data = rtrim($data,')');
+    //     $data = json_decode($data,true);
 
-        foreach ($data['cityLists'] as $city)
-        {
-            if($city['city'] == "成都")
-            {
-                $feiYan = [
-                    "新增确诊" => $city['lastLocalSureNew'],
-                    "新增无症状" => $city['lastIncrHideNew'],
-                    "现有确诊" => $city['currentConfirm']
-                ];
-                return $feiYan;
-            }
+    //     foreach ($data['cityLists'] as $city)
+    //     {
+    //         if($city['city'] == "成都")
+    //         {
+    //             $feiYan = [
+    //                 "新增确诊" => $city['lastLocalSureNew'],
+    //                 "新增无症状" => $city['lastIncrHideNew'],
+    //                 "现有确诊" => $city['currentConfirm']
+    //             ];
+    //             return $feiYan;
+    //         }
 
-        }
+    //     }
 
 
-    }
+    // }
 
     
 }
