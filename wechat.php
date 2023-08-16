@@ -3,13 +3,7 @@ $timezone = date_default_timezone_get();           // 获取默认时区
 if ($timezone !== 'Asia/Shanghai') {
     date_default_timezone_set('Asia/Shanghai');    // 设置默认时区
 }
-/*
- * @Author: 贺和平
- * @Date: 2022-08-22 20:58:39
- * @Mail: 1297685880@qq.com
- * @LastEditTime: 2022-08-23 19:02:21
- * @FilePath: \\undefinedc:\\Users\\ai014\\Desktop\\wechat-msg\\wechat.php
- */
+
 echo @$_GET['echostr'];
 require_once 'Duck.php';
 
