@@ -48,7 +48,7 @@ $weekarray=array("日","一","二","三","四","五","六");
                 'color' => '#40d6bf'
             ],
             'qinghua' => [//情话
-                'value' => $start->getQingHua(),
+                'value' => '2',
                 'color' => '#eb5f76'
             ],
             'birthday' => [//生日
