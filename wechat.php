@@ -15,7 +15,7 @@ $start = new Duck($config);
 $weekarray=array("日","一","二","三","四","五","六");
     $data = [
         'touser' => '',
-        'template_id' => $start->getTemplateList()['template_list'][0]['template_id'],//默认只给第一个模板发消息
+        'template_id' => $start->getTemplateList()['template_list'][1]['template_id'],//默认只给第一个模板发消息
         'url' => 'https://github.com/smujm',
         'topcolor' => '#fdb3b0',
         'data' => [
@@ -59,8 +59,8 @@ $weekarray=array("日","一","二","三","四","五","六");
                 'value' => $start->getTogetherDays(),
                 'color' => '#8218e7'
             ],
-            'qinghua' => [//情话
-                'value' => $start->getIndices()['daily'][0]['text'],
+            'say' => [//情话
+                'value' => $start->getQingHua(),
                 'color' => '#eb5f76'
             ]
             // 'currentConfirm' => [//现有确诊
