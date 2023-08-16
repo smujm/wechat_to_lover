@@ -49,7 +49,7 @@ $weekarray=array("日","一","二","三","四","五","六");
             ],
             'birthday' => [//生日
                 'value' => $start->getBirthday(),
-                'color' => '#fdb3b0'
+                'color' => "#fdb3b0",
             ],
             'birthday2' => [//第二个人的生日
                 'value' => $start->getBirthday($config['birthday2']),
