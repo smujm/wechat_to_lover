@@ -47,10 +47,6 @@ $weekarray=array("日","一","二","三","四","五","六");
                 'value' => $start->getIndices()['daily'][0]['text'],
                 'color' => '#40d6bf'
             ],
-            'qinghua' => [//情话
-                'value' => $start->getIndices()['daily'][0]['text'],
-                'color' => '#eb5f76'
-            ],
             'birthday' => [//生日
                 'value' => $start->getBirthday(),
                 'color' => '#fdb3b0'
@@ -63,6 +59,10 @@ $weekarray=array("日","一","二","三","四","五","六");
                 'value' => $start->getTogetherDays(),
                 'color' => '#8218e7'
             ]
+            'qinghua' => [//情话
+                'value' => $start->getIndices()['daily'][0]['text'],
+                'color' => '#eb5f76'
+            ],
             // 'currentConfirm' => [//现有确诊
             //     'value' => $start->getFeiYan()['现有确诊'],
             //     'color' => '#ff6330'
