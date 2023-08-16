@@ -92,7 +92,7 @@ class Duck
         $qinghua = $this->getUrl($url);
         if(!isset($qinghua['ishan']))
         {
-            $qinghua = $this->getUrl('https://api.lovelive.tools/api/SweetNothings');
+            $qinghua = "哎呀呀，我又来了";
             return $qinghua;
         }
         return $qinghua['ishan'];
